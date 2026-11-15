@@ -4,7 +4,8 @@
     python -m agent_risque.app.server --llm      # rapport reformulé par Bedrock (identifiants AWS requis)
 
 Principes :
-- écoute 127.0.0.1 seulement ; Host et Origin sont contrôlés (protège contre les pages tierces) ;
+- écoute 127.0.0.1 seulement par défaut ; Host et Origin sont contrôlés (protège contre les pages tierces) ;
+- déploiement public (AWS) : `--host 0.0.0.0 --allowed-hosts <domaine>` (ou `*`) ; l'Origin doit alors être celui de la page elle-même ;
 - le calcul démarre à l'ouverture de la page d'une action, jamais avant ;
 - les parties POST ne font que : enregistrer un achat SIMULÉ, effacer ce registre, poser une question.
 """
@@ -12,6 +13,7 @@ Principes :
 from __future__ import annotations
 
 import argparse
+import os
 import re
 import threading
 import time
@@ -141,14 +143,20 @@ class Handler(BaseHTTPRequestHandler):
         if self.command != "HEAD":
             self.wfile.write(body)
 
+    allowed_hosts: frozenset | None = None   # None : mode local ; sinon noms d'hôte publics acceptés (« * » = tous)
+
     def _host_ok(self) -> bool:
         host = (self.headers.get("Host") or "").lower()
+        if self.allowed_hosts is not None:
+            return "*" in self.allowed_hosts or host.rsplit(":", 1)[0] in self.allowed_hosts or host in self.allowed_hosts
         return host in {f"{config.APP_HOST}:{self.server.server_port}", f"localhost:{self.server.server_port}"}
 
     def _origin_ok(self) -> bool:
         origin = self.headers.get("Origin")
         if origin is None:
             return True
+        if self.allowed_hosts is not None:        # public : seule la page elle-même peut envoyer ses formulaires
+            return origin.lower().split("://", 1)[-1] == (self.headers.get("Host") or "").lower()
         return origin.lower() in {f"http://{config.APP_HOST}:{self.server.server_port}", f"http://localhost:{self.server.server_port}"}
 
     def _persona(self, params: dict) -> str:
@@ -353,29 +361,37 @@ class Handler(BaseHTTPRequestHandler):
 
 
 def make_server(port: int | None = None, report_mode: str = "template", ledger_dir=None,
-                ask_situations: bool = True, news_provider=None, fx_provider=None) -> ThreadingHTTPServer:
+                ask_situations: bool = True, news_provider=None, fx_provider=None,
+                host: str | None = None, allowed_hosts=None) -> ThreadingHTTPServer:
     """news_provider(ticker, refresh) -> dict et fx_provider(montant) -> dict : None les désactive (tests)."""
     handler = type("ConfiguredHandler", (Handler,), {
         "report_mode": report_mode, "ledger_dir": ledger_dir, "question_counts": {}, "ask_situations": ask_situations,
-        "news_gate": NewsGate(news_provider) if news_provider else None, "fx_provider": staticmethod(fx_provider) if fx_provider else None})
-    return ThreadingHTTPServer((config.APP_HOST, config.APP_PORT if port is None else port), handler)
+        "news_gate": NewsGate(news_provider) if news_provider else None, "fx_provider": staticmethod(fx_provider) if fx_provider else None,
+        "allowed_hosts": frozenset(h.strip().lower() for h in allowed_hosts) if allowed_hosts else None})
+    return ThreadingHTTPServer((host or config.APP_HOST, config.APP_PORT if port is None else port), handler)
 
 
 def main() -> None:
     parser = argparse.ArgumentParser(description="Page de démonstration de Peace, l'agent de risque (simulation).")
     parser.add_argument("--llm", action="store_true", help="reformule le rapport avec Amazon Bedrock")
-    parser.add_argument("--port", type=int, default=config.APP_PORT)
+    parser.add_argument("--port", type=int, default=int(os.environ.get("PORT") or config.APP_PORT))
+    parser.add_argument("--host", default=os.environ.get("PEACE_HOST") or config.APP_HOST,
+                        help="adresse d'écoute ; 0.0.0.0 pour un déploiement public (AWS)")
+    parser.add_argument("--allowed-hosts", default=os.environ.get("PEACE_ALLOWED_HOSTS", ""),
+                        help="noms d'hôte publics acceptés, séparés par des virgules (« * » : tous) ; vide : mode local")
     parser.add_argument("--no-news", action="store_true", help="désactive l'agent Actualité et le taux du jour")
     args = parser.parse_args()
+    allowed = [h for h in args.allowed_hosts.split(",") if h.strip()]
+    net = {"host": args.host, "allowed_hosts": allowed}
     if args.no_news:
-        server = make_server(args.port, "llm" if args.llm else "template")
+        server = make_server(args.port, "llm" if args.llm else "template", **net)
     else:
         from .. import fx_live
         from ..news import service as news_service
         server = make_server(args.port, "llm" if args.llm else "template",
                              news_provider=lambda t, refresh: news_service.get_news(t, refresh=refresh),
-                             fx_provider=lambda amount: fx_live.summary(amount, service.AS_OF))
-    print(f"Ouvrez http://{config.APP_HOST}:{server.server_port}/  (Ctrl+C pour arrêter)")
+                             fx_provider=lambda amount: fx_live.summary(amount, service.AS_OF), **net)
+    print(f"Ouvrez http://{args.host}:{server.server_port}/  (Ctrl+C pour arrêter)")
     try:
         server.serve_forever()
     except KeyboardInterrupt:

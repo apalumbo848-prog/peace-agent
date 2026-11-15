@@ -266,5 +266,39 @@ class LeadSentenceTests(unittest.TestCase):
         self.assertNotIn("contraintes déclarées relève", html)
 
 
+class PublicDeploymentTests(unittest.TestCase):
+    """Mode public (AWS) : hôte public accepté, Origin = la page elle-même, rien d'autre."""
+
+    @classmethod
+    def setUpClass(cls):
+        cls.srv = server.make_server(0, "template", Path(tempfile.mkdtemp()), ask_situations=False, host="127.0.0.1",
+                                     allowed_hosts=["peace.example.com"])
+        cls.port = cls.srv.server_port
+        threading.Thread(target=cls.srv.serve_forever, daemon=True).start()
+
+    @classmethod
+    def tearDownClass(cls):
+        cls.srv.shutdown()
+        cls.srv.server_close()
+
+    def call(self, method, path, host, origin=None, body=b""):
+        import http.client
+        conn = http.client.HTTPConnection("127.0.0.1", self.port)
+        headers = {"Host": host, "Content-Type": "application/x-www-form-urlencoded", "Content-Length": str(len(body))}
+        if origin:
+            headers["Origin"] = origin
+        conn.request(method, path, body=body, headers=headers)
+        return conn.getresponse().status
+
+    def test_public_host_is_accepted_and_others_refused(self):
+        self.assertEqual(self.call("GET", "/", "peace.example.com"), 200)
+        self.assertEqual(self.call("GET", "/", "evil.example.org"), 403)
+
+    def test_cross_site_post_is_refused_but_same_origin_post_passes(self):
+        data = b"u=amira"
+        self.assertEqual(self.call("POST", "/reinitialiser", "peace.example.com", "https://evil.example.org", data), 403)
+        self.assertEqual(self.call("POST", "/reinitialiser", "peace.example.com", "https://peace.example.com", data), 303)
+
+
 if __name__ == "__main__":
     unittest.main()

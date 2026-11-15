@@ -28,6 +28,17 @@ reformule, et le code vérifie tout ce qu'elle produit.
 - Les identifiants AWS ne sont **jamais** dans le dépôt : ils viennent des variables d'environnement du terminal qui lance le serveur.
 - Sans identifiants, Peace fonctionne quand même : l'actualité est alors indiquée « indisponible » et le verdict ne repose que sur les prix. La page le dit.
 
+## Installation rapide
+
+```bash
+git clone https://github.com/apalumbo848-prog/peace-agent.git
+cd peace-agent
+pip install -r requirements.txt        # seulement pour les agents Bedrock ; le reste n'a besoin que de Python 3.12
+python -m agent_risque.app.server      # puis ouvrir http://127.0.0.1:8765/
+```
+
+Déploiement public sur AWS (EC2) : voir [DEPLOY_AWS.md](DEPLOY_AWS.md).
+
 ## Lancer la démonstration
 
 Python 3.12, sans autre dépendance pour le cœur du projet. Depuis le dossier `Datathon2026` :

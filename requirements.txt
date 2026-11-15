@@ -1,0 +1,4 @@
+# Le coeur du projet n'utilise que la bibliothèque standard de Python 3.12.
+# Ces deux paquets servent seulement aux agents Amazon Bedrock (actualité, questions de suivi).
+strands-agents
+boto3
