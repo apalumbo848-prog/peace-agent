@@ -1,0 +1,433 @@
+{
+ "user_id": "fictif_amira",
+ "name": "Amira",
+ "as_of": "2026-11-12",
+ "declared": {
+  "horizon_years": [
+   15,
+   null
+  ],
+  "preferences": [
+   "technologie",
+   "crypto"
+  ],
+  "experience": "intermediaire",
+  "age": 26,
+  "objective": "Croissance à long terme"
+ },
+ "quiz_answers": {
+  "q1_chute": 3,
+  "q2_gain_perte": 3,
+  "q3_titre_mediatise": 2,
+  "q4_part_volatile": 3,
+  "q5_regret": 3
+ },
+ "situations_answers": [
+  {
+   "ticker": "NVDA",
+   "ladder": [
+    true,
+    true,
+    true
+   ],
+   "reaction": 3,
+   "tradeoff": [
+    true,
+    true,
+    true
+   ]
+  },
+  {
+   "ticker": "TSLA",
+   "ladder": [
+    true,
+    true,
+    true
+   ],
+   "reaction": 2,
+   "tradeoff": [
+    true,
+    true,
+    true
+   ]
+  },
+  {
+   "ticker": "BTC-USD",
+   "ladder": [
+    true,
+    true,
+    false
+   ],
+   "reaction": 3,
+   "tradeoff": [
+    true,
+    true,
+    true
+   ]
+  },
+  {
+   "ticker": "SHOP.TO",
+   "ladder": [
+    true,
+    true,
+    true
+   ],
+   "reaction": 3,
+   "tradeoff": [
+    true,
+    true,
+    false
+   ]
+  },
+  {
+   "ticker": "AMZN",
+   "ladder": [
+    true,
+    true,
+    true
+   ],
+   "reaction": 3,
+   "tradeoff": [
+    true,
+    true,
+    true
+   ]
+  },
+  {
+   "ticker": "ETH-USD",
+   "ladder": [
+    true,
+    true,
+    false
+   ],
+   "reaction": 2,
+   "tradeoff": [
+    true,
+    true,
+    true
+   ]
+  }
+ ],
+ "transactions": [
+  {
+   "date": "2023-11-15",
+   "ticker": "NVDA",
+   "side": "buy",
+   "quantity": 89.7474,
+   "price": 48.888,
+   "currency": "USD"
+  },
+  {
+   "date": "2023-11-15",
+   "ticker": "SHOP.TO",
+   "side": "buy",
+   "quantity": 53.8503,
+   "price": 92.85,
+   "currency": "CAD"
+  },
+  {
+   "date": "2023-11-15",
+   "ticker": "MSFT",
+   "side": "buy",
+   "quantity": 9.8907,
+   "price": 369.67,
+   "currency": "USD"
+  },
+  {
+   "date": "2023-11-15",
+   "ticker": "BTC-USD",
+   "side": "buy",
+   "quantity": 0.0579,
+   "price": 37880.582,
+   "currency": "USD"
+  },
+  {
+   "date": "2023-11-15",
+   "ticker": "ETH-USD",
+   "side": "buy",
+   "quantity": 0.7098,
+   "price": 2060.4084,
+   "currency": "USD"
+  },
+  {
+   "date": "2023-11-15",
+   "ticker": "TSLA",
+   "side": "buy",
+   "quantity": 7.5282,
+   "price": 242.84,
+   "currency": "USD"
+  },
+  {
+   "date": "2024-01-22",
+   "ticker": "BTC-USD",
+   "side": "buy",
+   "quantity": 0.0282,
+   "price": 39507.3672,
+   "currency": "USD"
+  },
+  {
+   "date": "2024-01-25",
+   "ticker": "ETH-USD",
+   "side": "buy",
+   "quantity": 0.3341,
+   "price": 2217.7102,
+   "currency": "USD"
+  },
+  {
+   "date": "2024-02-01",
+   "ticker": "BTC-USD",
+   "side": "buy",
+   "quantity": 0.0173,
+   "price": 43075.7734,
+   "currency": "USD"
+  },
+  {
+   "date": "2024-04-19",
+   "ticker": "NVDA",
+   "side": "buy",
+   "quantity": 28.637,
+   "price": 76.2,
+   "currency": "USD"
+  },
+  {
+   "date": "2024-04-22",
+   "ticker": "TSLA",
+   "side": "buy",
+   "quantity": 10.2658,
+   "price": 142.05,
+   "currency": "USD"
+  },
+  {
+   "date": "2024-06-03",
+   "ticker": "MSFT",
+   "side": "buy",
+   "quantity": 2.6604,
+   "price": 413.52,
+   "currency": "USD"
+  },
+  {
+   "date": "2024-08-06",
+   "ticker": "SHOP.TO",
+   "side": "buy",
+   "quantity": 40.2361,
+   "price": 74.56,
+   "currency": "CAD"
+  },
+  {
+   "date": "2024-08-07",
+   "ticker": "NVDA",
+   "side": "buy",
+   "quantity": 18.3969,
+   "price": 98.91,
+   "currency": "USD"
+  },
+  {
+   "date": "2024-08-07",
+   "ticker": "TSLA",
+   "side": "buy",
+   "quantity": 5.6935,
+   "price": 191.76,
+   "currency": "USD"
+  },
+  {
+   "date": "2024-09-06",
+   "ticker": "BTC-USD",
+   "side": "buy",
+   "quantity": 0.0274,
+   "price": 53948.7539,
+   "currency": "USD"
+  },
+  {
+   "date": "2024-10-01",
+   "ticker": "ETH-USD",
+   "side": "buy",
+   "quantity": 0.3024,
+   "price": 2448.9211,
+   "currency": "USD"
+  },
+  {
+   "date": "2024-12-18",
+   "ticker": "NVDA",
+   "side": "buy",
+   "quantity": 8.1127,
+   "price": 128.91,
+   "currency": "USD"
+  },
+  {
+   "date": "2025-01-09",
+   "ticker": "BTC-USD",
+   "side": "buy",
+   "quantity": 0.0113,
+   "price": 92484.0391,
+   "currency": "USD"
+  },
+  {
+   "date": "2025-01-14",
+   "ticker": "SHOP.TO",
+   "side": "buy",
+   "quantity": 10.2867,
+   "price": 145.82,
+   "currency": "CAD"
+  },
+  {
+   "date": "2025-04-04",
+   "ticker": "NVDA",
+   "side": "buy",
+   "quantity": 22.3762,
+   "price": 94.31,
+   "currency": "USD"
+  },
+  {
+   "date": "2025-04-04",
+   "ticker": "SHOP.TO",
+   "side": "buy",
+   "quantity": 22.8477,
+   "price": 109.42,
+   "currency": "CAD"
+  },
+  {
+   "date": "2025-04-08",
+   "ticker": "TSLA",
+   "side": "buy",
+   "quantity": 6.3502,
+   "price": 221.86,
+   "currency": "USD"
+  },
+  {
+   "date": "2025-04-08",
+   "ticker": "BTC-USD",
+   "side": "buy",
+   "quantity": 0.0185,
+   "price": 76271.9531,
+   "currency": "USD"
+  },
+  {
+   "date": "2025-04-08",
+   "ticker": "ETH-USD",
+   "side": "buy",
+   "quantity": 0.7176,
+   "price": 1472.5531,
+   "currency": "USD"
+  },
+  {
+   "date": "2025-04-08",
+   "ticker": "MSFT",
+   "side": "buy",
+   "quantity": 4.9669,
+   "price": 354.56,
+   "currency": "USD"
+  },
+  {
+   "date": "2025-04-08",
+   "ticker": "QQQ",
+   "side": "buy",
+   "quantity": 5.0792,
+   "price": 416.06,
+   "currency": "USD"
+  },
+  {
+   "date": "2025-06-02",
+   "ticker": "NVDA",
+   "side": "buy",
+   "quantity": 7.9657,
+   "price": 137.38,
+   "currency": "USD"
+  },
+  {
+   "date": "2025-10-30",
+   "ticker": "NVDA",
+   "side": "sell",
+   "quantity": 26.2854,
+   "price": 202.89,
+   "currency": "USD"
+  },
+  {
+   "date": "2025-10-30",
+   "ticker": "SHOP.TO",
+   "side": "sell",
+   "quantity": 12.7221,
+   "price": 242.95,
+   "currency": "CAD"
+  },
+  {
+   "date": "2026-02-02",
+   "ticker": "TSLA",
+   "side": "buy",
+   "quantity": 1.7335,
+   "price": 421.81,
+   "currency": "USD"
+  },
+  {
+   "date": "2026-03-30",
+   "ticker": "NVDA",
+   "side": "buy",
+   "quantity": 10.8688,
+   "price": 165.17,
+   "currency": "USD"
+  },
+  {
+   "date": "2026-05-13",
+   "ticker": "SHOP.TO",
+   "side": "buy",
+   "quantity": 19.1263,
+   "price": 130.71,
+   "currency": "CAD"
+  },
+  {
+   "date": "2026-06-25",
+   "ticker": "MSFT",
+   "side": "buy",
+   "quantity": 5.9861,
+   "price": 352.83,
+   "currency": "USD"
+  },
+  {
+   "date": "2026-06-25",
+   "ticker": "ETH-USD",
+   "side": "buy",
+   "quantity": 0.6749,
+   "price": 1564.8166,
+   "currency": "USD"
+  },
+  {
+   "date": "2026-06-30",
+   "ticker": "BTC-USD",
+   "side": "buy",
+   "quantity": 0.03,
+   "price": 58558.8594,
+   "currency": "USD"
+  },
+  {
+   "date": "2026-07-29",
+   "ticker": "TSLA",
+   "side": "buy",
+   "quantity": 3.5704,
+   "price": 298.32,
+   "currency": "USD"
+  },
+  {
+   "date": "2026-07-29",
+   "ticker": "NVDA",
+   "side": "buy",
+   "quantity": 7.4741,
+   "price": 190.01,
+   "currency": "USD"
+  },
+  {
+   "date": "2026-11-03",
+   "ticker": "SHOP.TO",
+   "side": "buy",
+   "quantity": 7.4929,
+   "price": 200.19,
+   "currency": "CAD"
+  },
+  {
+   "date": "2026-11-10",
+   "ticker": "NVDA",
+   "side": "buy",
+   "quantity": 8.3506,
+   "price": 168.89,
+   "currency": "USD"
+  }
+ ]
+}

@@ -1,0 +1,190 @@
+{
+ "user_id": "fictif_robert",
+ "name": "Robert",
+ "as_of": "2026-11-12",
+ "declared": {
+  "horizon_years": [
+   3,
+   5
+  ],
+  "preferences": [],
+  "experience": "avance",
+  "age": 59,
+  "objective": "Préservation du capital"
+ },
+ "quiz_answers": {
+  "q1_chute": 1,
+  "q2_gain_perte": 0,
+  "q3_titre_mediatise": 0,
+  "q4_part_volatile": 1,
+  "q5_regret": 0
+ },
+ "situations_answers": [
+  {
+   "ticker": "XBB.TO",
+   "ladder": [
+    true,
+    false,
+    false
+   ],
+   "reaction": 0,
+   "tradeoff": [
+    false,
+    false,
+    false
+   ]
+  },
+  {
+   "ticker": "RY.TO",
+   "ladder": [
+    true,
+    false,
+    false
+   ],
+   "reaction": 0,
+   "tradeoff": [
+    false,
+    false,
+    false
+   ]
+  },
+  {
+   "ticker": "JNJ",
+   "ladder": [
+    true,
+    false,
+    false
+   ],
+   "reaction": 1,
+   "tradeoff": [
+    false,
+    false,
+    false
+   ]
+  },
+  {
+   "ticker": "SPY",
+   "ladder": [
+    true,
+    false,
+    false
+   ],
+   "reaction": 0,
+   "tradeoff": [
+    false,
+    false,
+    false
+   ]
+  },
+  {
+   "ticker": "PG",
+   "ladder": [
+    true,
+    false,
+    false
+   ],
+   "reaction": 1,
+   "tradeoff": [
+    false,
+    false,
+    false
+   ]
+  },
+  {
+   "ticker": "ZST.TO",
+   "ladder": [
+    true,
+    false,
+    false
+   ],
+   "reaction": 0,
+   "tradeoff": [
+    false,
+    false,
+    false
+   ]
+  }
+ ],
+ "transactions": [
+  {
+   "date": "2021-11-15",
+   "ticker": "ZST.TO",
+   "side": "buy",
+   "quantity": 303.3367,
+   "price": 49.45,
+   "currency": "CAD"
+  },
+  {
+   "date": "2021-11-15",
+   "ticker": "XBB.TO",
+   "side": "buy",
+   "quantity": 321.5434,
+   "price": 31.1,
+   "currency": "CAD"
+  },
+  {
+   "date": "2021-11-15",
+   "ticker": "RY.TO",
+   "side": "buy",
+   "quantity": 60.4002,
+   "price": 132.45,
+   "currency": "CAD"
+  },
+  {
+   "date": "2021-11-15",
+   "ticker": "JNJ",
+   "side": "buy",
+   "quantity": 29.3143,
+   "price": 163.52,
+   "currency": "USD"
+  },
+  {
+   "date": "2021-11-15",
+   "ticker": "PG",
+   "side": "buy",
+   "quantity": 27.1002,
+   "price": 147.4,
+   "currency": "USD"
+  },
+  {
+   "date": "2021-11-15",
+   "ticker": "ENB.TO",
+   "side": "buy",
+   "quantity": 98.8338,
+   "price": 50.59,
+   "currency": "CAD"
+  },
+  {
+   "date": "2023-10-04",
+   "ticker": "ENB.TO",
+   "side": "sell",
+   "quantity": 98.8338,
+   "price": 43.12,
+   "currency": "CAD"
+  },
+  {
+   "date": "2024-12-17",
+   "ticker": "TSLA",
+   "side": "buy",
+   "quantity": 4.3704,
+   "price": 479.86,
+   "currency": "USD"
+  },
+  {
+   "date": "2025-02-14",
+   "ticker": "TSLA",
+   "side": "sell",
+   "quantity": 4.3704,
+   "price": 355.84,
+   "currency": "USD"
+  },
+  {
+   "date": "2025-03-03",
+   "ticker": "AGG",
+   "side": "buy",
+   "quantity": 27.9587,
+   "price": 99.16,
+   "currency": "USD"
+  }
+ ]
+}

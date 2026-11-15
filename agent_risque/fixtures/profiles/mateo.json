@@ -1,0 +1,277 @@
+{
+ "user_id": "fictif_mateo",
+ "name": "Mateo",
+ "as_of": "2026-11-12",
+ "declared": {
+  "horizon_years": [
+   8,
+   12
+  ],
+  "preferences": [
+   "ESG"
+  ],
+  "experience": "intermediaire",
+  "age": 41,
+  "objective": "Équilibre croissance-stabilité",
+  "exclusions": {
+   "sectors": [
+    "Energy"
+   ]
+  }
+ },
+ "quiz_answers": {
+  "q1_chute": 2,
+  "q2_gain_perte": 1,
+  "q3_titre_mediatise": 1,
+  "q4_part_volatile": 1,
+  "q5_regret": 1
+ },
+ "situations_answers": [
+  {
+   "ticker": "SPY",
+   "ladder": [
+    true,
+    true,
+    false
+   ],
+   "reaction": 1,
+   "tradeoff": [
+    true,
+    false,
+    false
+   ]
+  },
+  {
+   "ticker": "QQQ",
+   "ladder": [
+    true,
+    true,
+    false
+   ],
+   "reaction": 2,
+   "tradeoff": [
+    true,
+    false,
+    false
+   ]
+  },
+  {
+   "ticker": "RY.TO",
+   "ladder": [
+    true,
+    true,
+    false
+   ],
+   "reaction": 1,
+   "tradeoff": [
+    true,
+    true,
+    false
+   ]
+  },
+  {
+   "ticker": "MSFT",
+   "ladder": [
+    true,
+    false,
+    false
+   ],
+   "reaction": 1,
+   "tradeoff": [
+    true,
+    false,
+    false
+   ]
+  },
+  {
+   "ticker": "XIU.TO",
+   "ladder": [
+    true,
+    true,
+    false
+   ],
+   "reaction": 2,
+   "tradeoff": [
+    true,
+    false,
+    false
+   ]
+  },
+  {
+   "ticker": "AAPL",
+   "ladder": [
+    true,
+    true,
+    false
+   ],
+   "reaction": 1,
+   "tradeoff": [
+    true,
+    false,
+    false
+   ]
+  }
+ ],
+ "transactions": [
+  {
+   "date": "2021-11-15",
+   "ticker": "ESGV",
+   "side": "buy",
+   "quantity": 73.1104,
+   "price": 87.42,
+   "currency": "USD"
+  },
+  {
+   "date": "2021-11-15",
+   "ticker": "XIU.TO",
+   "side": "buy",
+   "quantity": 181.5431,
+   "price": 33.05,
+   "currency": "CAD"
+  },
+  {
+   "date": "2021-11-15",
+   "ticker": "RY.TO",
+   "side": "buy",
+   "quantity": 30.2001,
+   "price": 132.45,
+   "currency": "CAD"
+  },
+  {
+   "date": "2021-11-15",
+   "ticker": "JNJ",
+   "side": "buy",
+   "quantity": 14.6572,
+   "price": 163.52,
+   "currency": "USD"
+  },
+  {
+   "date": "2021-11-15",
+   "ticker": "XOM",
+   "side": "buy",
+   "quantity": 37.2338,
+   "price": 64.37,
+   "currency": "USD"
+  },
+  {
+   "date": "2021-11-15",
+   "ticker": "CNQ.TO",
+   "side": "buy",
+   "quantity": 117.0872,
+   "price": 25.6219,
+   "currency": "CAD"
+  },
+  {
+   "date": "2021-11-15",
+   "ticker": "FTS.TO",
+   "side": "buy",
+   "quantity": 53.1538,
+   "price": 56.44,
+   "currency": "CAD"
+  },
+  {
+   "date": "2021-11-15",
+   "ticker": "XBB.TO",
+   "side": "buy",
+   "quantity": 96.463,
+   "price": 31.1,
+   "currency": "CAD"
+  },
+  {
+   "date": "2022-05-02",
+   "ticker": "ESGV",
+   "side": "buy",
+   "quantity": 15.8114,
+   "price": 73.57,
+   "currency": "USD"
+  },
+  {
+   "date": "2022-11-01",
+   "ticker": "FTS.TO",
+   "side": "buy",
+   "quantity": 28.4414,
+   "price": 52.74,
+   "currency": "CAD"
+  },
+  {
+   "date": "2023-05-01",
+   "ticker": "ESGV",
+   "side": "buy",
+   "quantity": 15.2926,
+   "price": 72.41,
+   "currency": "USD"
+  },
+  {
+   "date": "2023-11-01",
+   "ticker": "XIU.TO",
+   "side": "buy",
+   "quantity": 51.5818,
+   "price": 29.08,
+   "currency": "CAD"
+  },
+  {
+   "date": "2024-04-10",
+   "ticker": "CNQ.TO",
+   "side": "sell",
+   "quantity": 117.0872,
+   "price": 56.305,
+   "currency": "CAD"
+  },
+  {
+   "date": "2024-05-01",
+   "ticker": "ESGV",
+   "side": "buy",
+   "quantity": 12.3311,
+   "price": 88.41,
+   "currency": "USD"
+  },
+  {
+   "date": "2024-10-07",
+   "ticker": "XOM",
+   "side": "sell",
+   "quantity": 37.2338,
+   "price": 125.37,
+   "currency": "USD"
+  },
+  {
+   "date": "2024-11-01",
+   "ticker": "FTS.TO",
+   "side": "buy",
+   "quantity": 25.1088,
+   "price": 59.74,
+   "currency": "CAD"
+  },
+  {
+   "date": "2025-05-01",
+   "ticker": "ESGV",
+   "side": "buy",
+   "quantity": 11.0232,
+   "price": 98.35,
+   "currency": "USD"
+  },
+  {
+   "date": "2025-11-03",
+   "ticker": "XIU.TO",
+   "side": "buy",
+   "quantity": 33.1858,
+   "price": 45.2,
+   "currency": "CAD"
+  },
+  {
+   "date": "2026-05-01",
+   "ticker": "ESGV",
+   "side": "buy",
+   "quantity": 8.7461,
+   "price": 126.33,
+   "currency": "USD"
+  },
+  {
+   "date": "2026-11-02",
+   "ticker": "FTS.TO",
+   "side": "buy",
+   "quantity": 18.0832,
+   "price": 82.95,
+   "currency": "CAD"
+  }
+ ]
+}

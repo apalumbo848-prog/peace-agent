@@ -1,0 +1,67 @@
+{
+ "user_id": "fictif_lea",
+ "name": "Léa",
+ "as_of": "2026-11-12",
+ "declared": {
+  "horizon_years": [
+   20,
+   null
+  ],
+  "preferences": [],
+  "experience": "debutant",
+  "age": 18,
+  "objective": "Premier placement, petit montant"
+ },
+ "quiz_answers": {
+  "q1_chute": 2,
+  "q2_gain_perte": 1,
+  "q3_titre_mediatise": 1,
+  "q4_part_volatile": 1,
+  "q5_regret": 2
+ },
+ "situations_answers": [
+  {
+   "ticker": "SPY",
+   "ladder": [
+    true,
+    false,
+    false
+   ],
+   "reaction": 1,
+   "tradeoff": [
+    true,
+    false,
+    false
+   ]
+  },
+  {
+   "ticker": "QQQ",
+   "ladder": [
+    true,
+    true,
+    false
+   ],
+   "reaction": 2,
+   "tradeoff": [
+    true,
+    false,
+    false
+   ]
+  },
+  {
+   "ticker": "XIU.TO",
+   "ladder": [
+    true,
+    false,
+    false
+   ],
+   "reaction": 2,
+   "tradeoff": [
+    true,
+    false,
+    false
+   ]
+  }
+ ],
+ "transactions": []
+}

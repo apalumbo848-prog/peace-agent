@@ -1,0 +1,8 @@
+__pycache__/
+*.pyc
+.env
+# fichiers générés pendant l'utilisation de la démo (achats simulés, analyses d'actualité du jour)
+agent_risque/app_data/
+# documents officiels de l'organisateur
+*.pdf
+*.pptx
