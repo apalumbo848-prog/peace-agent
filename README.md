@@ -28,6 +28,8 @@ reformule, et le code vérifie tout ce qu'elle produit.
 - Les identifiants AWS ne sont **jamais** dans le dépôt : ils viennent des variables d'environnement du terminal qui lance le serveur.
 - Sans identifiants, Peace fonctionne quand même : l'actualité est alors indiquée « indisponible » et le verdict ne repose que sur les prix. La page le dit.
 
+**Application déployée sur AWS (EC2) : http://54.196.240.12/**
+
 ## Installation rapide
 
 ```bash
